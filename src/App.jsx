@@ -41,6 +41,12 @@ export default function App() {
             onChange={(e) => setSearch(e.target.value)}
           >
             <option value="">Tutti i generi</option>
+            {
+              movies.map((singleMovie, k) => (
+                <option value={`${singleMovie.genre}`} key={k}>{`${singleMovie.genre}`}</option>
+              ))
+            }
+
           </select>
         </div>
 
