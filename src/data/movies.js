@@ -1,10 +1,10 @@
 const moviesList = [
-    { title: 'Inception', genre: 'Fantascienza', img: 'https://picsum.photos/200/200.jpg' },
-    { title: 'Il Padrino', genre: 'Thriller', img: 'https://picsum.photos/200/200.jpg' },
-    { title: 'Titanic', genre: 'Romantico', img: 'https://picsum.photos/200/200.jpg' },
-    { title: 'Batman', genre: 'Azione', img: 'https://picsum.photos/200/200.jpg' },
-    { title: 'Interstellar', genre: 'Fantascienza', img: 'https://picsum.photos/200/200.jpg' },
-    { title: 'Pulp Fiction', genre: 'Thriller', img: 'https://picsum.photos/200/200.jpg' },
+    { title: 'Inception', genre: 'Fantascienza', img: '/inception.jpg' },
+    { title: 'Il Padrino', genre: 'Thriller', img: '/padrino.jpg' },
+    { title: 'Titanic', genre: 'Romantico', img: '/titanic.jpg' },
+    { title: 'Batman', genre: 'Azione', img: '/batman.jpg' },
+    { title: 'Interstellar', genre: 'Fantascienza', img: '/interstellar.jpg' },
+    { title: 'Pulp Fiction', genre: 'Thriller', img: '/pulp-fiction.jpg' },
 ]
 
 export default moviesList

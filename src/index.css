@@ -14,3 +14,8 @@ body {
 
     width: 50%;
 }
+
+.card img {
+    max-height: 15rem;
+    object-fit: cover;
+}
