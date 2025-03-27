@@ -13,11 +13,19 @@ export default function App() {
   const [search, setSearch] = useState('')
   const [filteredMovies, setFilteredMovies] = useState(movies)
 
-  useEffect(() => {
+  /*useEffect(() => {
 
     setFilteredMovies(movies.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase())))
 
+  }, [movies, search]);*/
+
+
+  useEffect(() => {
+
+    setFilteredMovies(movies.filter(movie => movie.genre.toLowerCase().includes(search.toLowerCase())))
+
   }, [movies, search]);
+
 
   return (
     <>
@@ -25,14 +33,16 @@ export default function App() {
         <h1 className='text-center'>Movies</h1>
 
         <div className='d-flex'>
-          <input
+
+          {/*<input
             type="text"
             className='form-control'
             name='search-movie'
             id='search-movie'
             placeholder='Cerca un film '
             value={search}
-            onChange={e => setSearch(e.target.value)} />
+            onChange={e => setSearch(e.target.value)} />*/}
+
         </div>
 
         <div className='my-2'>
@@ -41,11 +51,18 @@ export default function App() {
             onChange={(e) => setSearch(e.target.value)}
           >
             <option value="">Tutti i generi</option>
+            <option value="fantascienza">Fantascienza</option>
+            <option value="thriller">Thriller</option>
+            <option value="romantico">Romantico</option>
+            <option value="azione">Azione</option>
+
+            {/*
             {
               movies.map((singleMovie, k) => (
                 <option value={`${singleMovie.genre}`} key={k}>{`${singleMovie.genre}`}</option>
               ))
             }
+            */}
 
           </select>
         </div>
@@ -66,6 +83,7 @@ export default function App() {
             </div>
           ))}
         </div>
+
       </div>
     </>
   )
