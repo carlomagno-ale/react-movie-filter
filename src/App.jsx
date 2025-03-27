@@ -24,20 +24,27 @@ export default function App() {
       <div className="container">
         <h1 className='text-center'>Movies</h1>
 
-        <div className='d-flex justify-content-center'>
-
+        <div className='d-flex'>
           <input
             type="text"
             className='form-control'
             name='search-movie'
             id='search-movie'
-            aria-describedby='helpId'
-            placeholder='search a task'
+            placeholder='Cerca un film '
             value={search}
             onChange={e => setSearch(e.target.value)} />
         </div>
 
-        <div className='row my-4'>
+        <div className='my-2'>
+          <select
+            className="form-select"
+            onChange={(e) => setSearch(e.target.value)}
+          >
+            <option value="">Tutti i generi</option>
+          </select>
+        </div>
+
+        <div className='row mt-2 mb-5'>
           {filteredMovies.map((movie, index) => (
             <div className='col-4 mt-2' key={index}>
               <div className="card" style={{ width: '15rem' }}>
