@@ -19,31 +19,27 @@ export default function App() {
 
   }, [movies, search]);*/
 
-
   useEffect(() => {
 
     setFilteredMovies(movies.filter(movie => movie.genre.toLowerCase().includes(search.toLowerCase())))
 
   }, [movies, search]);
 
-
   return (
     <>
       <div className="container">
         <h1 className='text-center'>Movies</h1>
 
-        <div className='d-flex'>
-
-          {/*<input
+        {/*<div className='d-flex'>
+          <input
             type="text"
             className='form-control'
             name='search-movie'
             id='search-movie'
             placeholder='Cerca un film '
             value={search}
-            onChange={e => setSearch(e.target.value)} />*/}
-
-        </div>
+            onChange={e => setSearch(e.target.value)} />
+        </div>*/}
 
         <div className='my-2'>
           <select
@@ -56,12 +52,10 @@ export default function App() {
             <option value="romantico">Romantico</option>
             <option value="azione">Azione</option>
 
-            {/*
-            {
-              movies.map((singleMovie, k) => (
+            {/* rimane duplicato
+            { movies.map((singleMovie, k) => (
                 <option value={`${singleMovie.genre}`} key={k}>{`${singleMovie.genre}`}</option>
-              ))
-            }
+              ))}
             */}
 
           </select>
@@ -74,7 +68,7 @@ export default function App() {
                 <img
                   className="card-img-top"
                   src={movie.img}
-                  alt="random"
+                  alt="locandina"
                 />
                 <div className="card-body">
                   <h5 className="card-title fs-6">{movie.title}</h5>
@@ -83,7 +77,6 @@ export default function App() {
             </div>
           ))}
         </div>
-
       </div>
     </>
   )
